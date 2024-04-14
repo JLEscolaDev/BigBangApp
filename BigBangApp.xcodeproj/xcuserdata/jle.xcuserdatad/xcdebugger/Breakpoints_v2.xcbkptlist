@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F6E10EED-5951-4A2F-999E-213EE3210103"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "430D7532-31DB-40C5-9027-72FE61DFE086"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BigBangAPI/LocalDataInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "loadDataFromDTO(type:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "430D7532-31DB-40C5-9027-72FE61DFE086 - 6f5245d9bd388c81"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BigBangApp.LocalDataInteractor.loadDataFromDTO&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_0_0: BigBangApp.ModelConvertible, &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_1 == &#x3c4;_0_0.BigBangApp.ModelConvertible.ModelType&gt;(type: &#x3c4;_0_0.Type) throws -&gt; Swift.Array&lt;&#x3c4;_0_1&gt;"
+                  moduleName = "BigBangApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jle/projects/Projects/SwiftBootcamp2024/apps/BootcampSwiftUIExercises/BigBangApp/BigBangAPI/LocalDataInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "1476">
+               </Location>
+               <Location
+                  uuid = "430D7532-31DB-40C5-9027-72FE61DFE086 - d7ee6d352eb286fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BigBangApp.LocalDataInteractor.loadDataFromDTO&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_0_0: BigBangApp.ModelConvertible, &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_1: Swift.Decodable, &#x3c4;_0_1 == &#x3c4;_0_0.BigBangApp.ModelConvertible.ModelType&gt;(type: &#x3c4;_0_0.Type) throws -&gt; Swift.Array&lt;&#x3c4;_0_1&gt;"
+                  moduleName = "BigBangApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jle/projects/Projects/SwiftBootcamp2024/apps/BootcampSwiftUIExercises/BigBangApp/BigBangAPI/LocalDataInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "1500">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CE2ED562-E92D-4591-80AE-31EAC8FF70A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BigBangAPI/LocalDataInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "loadDataFromDTO(type:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CE2ED562-E92D-4591-80AE-31EAC8FF70A6 - 6f5245d9bd388c43"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BigBangApp.LocalDataInteractor.loadDataFromDTO&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_0_0: BigBangApp.ModelConvertible, &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_1 == &#x3c4;_0_0.BigBangApp.ModelConvertible.ModelType&gt;(type: &#x3c4;_0_0.Type) throws -&gt; Swift.Array&lt;&#x3c4;_0_1&gt;"
+                  moduleName = "BigBangApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jle/projects/Projects/SwiftBootcamp2024/apps/BootcampSwiftUIExercises/BigBangApp/BigBangAPI/LocalDataInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "1600">
+               </Location>
+               <Location
+                  uuid = "CE2ED562-E92D-4591-80AE-31EAC8FF70A6 - d7ee6d352eb28619"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BigBangApp.LocalDataInteractor.loadDataFromDTO&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_0_0: BigBangApp.ModelConvertible, &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_1: Swift.Decodable, &#x3c4;_0_1 == &#x3c4;_0_0.BigBangApp.ModelConvertible.ModelType&gt;(type: &#x3c4;_0_0.Type) throws -&gt; Swift.Array&lt;&#x3c4;_0_1&gt;"
+                  moduleName = "BigBangApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jle/projects/Projects/SwiftBootcamp2024/apps/BootcampSwiftUIExercises/BigBangApp/BigBangAPI/LocalDataInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1964">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1EB78DC2-CFDE-49A4-96B0-73C9F23BF62D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BigBangApp/Views/Main/MainView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7C6D5A4C-C1AF-4230-B229-085EC221A8E0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BigBangApp/AppInit/BigBangVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "updateEpisode(episode:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C1A40E22-A1BC-4333-9C5E-F675E5D6409A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BigBangApp/Views/Main/MainView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "episodeSeenCheckBox"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

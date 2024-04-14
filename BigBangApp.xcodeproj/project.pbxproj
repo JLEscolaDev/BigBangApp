@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		786B6D642BCBCA59003EB05F /* BigBangAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B6D632BCBCA59003EB05F /* BigBangAppApp.swift */; };
-		786B6D662BCBCA59003EB05F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B6D652BCBCA59003EB05F /* ContentView.swift */; };
+		786B6D662BCBCA59003EB05F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B6D652BCBCA59003EB05F /* MainView.swift */; };
 		786B6D682BCBCA5A003EB05F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786B6D672BCBCA5A003EB05F /* Assets.xcassets */; };
 		786B6D6B2BCBCA5A003EB05F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786B6D6A2BCBCA5A003EB05F /* Preview Assets.xcassets */; };
 		786B6D752BCBCA5A003EB05F /* BigBangAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B6D742BCBCA5A003EB05F /* BigBangAppTests.swift */; };
 		786B6D7F2BCBCA5A003EB05F /* BigBangAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B6D7E2BCBCA5A003EB05F /* BigBangAppUITests.swift */; };
 		786B6D812BCBCA5A003EB05F /* BigBangAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B6D802BCBCA5A003EB05F /* BigBangAppUITestsLaunchTests.swift */; };
+		786B6D922BCBCB2D003EB05F /* BigBangModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B6D912BCBCB2D003EB05F /* BigBangModel.swift */; };
+		786B6D972BCBCFCE003EB05F /* BigBangVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B6D962BCBCFCE003EB05F /* BigBangVM.swift */; };
+		786B6D9A2BCBD183003EB05F /* DataInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B6D992BCBD183003EB05F /* DataInteractorProtocol.swift */; };
+		786B6D9C2BCBD296003EB05F /* LocalDataInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B6D9B2BCBD296003EB05F /* LocalDataInteractor.swift */; };
+		786B6DA02BCBDCDE003EB05F /* OrderOptionsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B6D9F2BCBDCDE003EB05F /* OrderOptionsEnum.swift */; };
+		786B6DA22BCBDE06003EB05F /* SortButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B6DA12BCBDE06003EB05F /* SortButtonView.swift */; };
+		786B6DA42BCBE8F9003EB05F /* BigBang.json in Resources */ = {isa = PBXBuildFile; fileRef = 786B6DA32BCBE8F9003EB05F /* BigBang.json */; };
+		786B6DA72BCC27DD003EB05F /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B6DA62BCC27DD003EB05F /* CheckboxToggleStyle.swift */; };
+		786B6DAA2BCC6849003EB05F /* BigBangModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B6DA92BCC6849003EB05F /* BigBangModelDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +45,7 @@
 /* Begin PBXFileReference section */
 		786B6D602BCBCA59003EB05F /* BigBangApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigBangApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		786B6D632BCBCA59003EB05F /* BigBangAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBangAppApp.swift; sourceTree = "<group>"; };
-		786B6D652BCBCA59003EB05F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		786B6D652BCBCA59003EB05F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		786B6D672BCBCA5A003EB05F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		786B6D6A2BCBCA5A003EB05F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		786B6D702BCBCA5A003EB05F /* BigBangAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BigBangAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +53,15 @@
 		786B6D7A2BCBCA5A003EB05F /* BigBangAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BigBangAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		786B6D7E2BCBCA5A003EB05F /* BigBangAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBangAppUITests.swift; sourceTree = "<group>"; };
 		786B6D802BCBCA5A003EB05F /* BigBangAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBangAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		786B6D912BCBCB2D003EB05F /* BigBangModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBangModel.swift; sourceTree = "<group>"; };
+		786B6D962BCBCFCE003EB05F /* BigBangVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBangVM.swift; sourceTree = "<group>"; };
+		786B6D992BCBD183003EB05F /* DataInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInteractorProtocol.swift; sourceTree = "<group>"; };
+		786B6D9B2BCBD296003EB05F /* LocalDataInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataInteractor.swift; sourceTree = "<group>"; };
+		786B6D9F2BCBDCDE003EB05F /* OrderOptionsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderOptionsEnum.swift; sourceTree = "<group>"; };
+		786B6DA12BCBDE06003EB05F /* SortButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortButtonView.swift; sourceTree = "<group>"; };
+		786B6DA32BCBE8F9003EB05F /* BigBang.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BigBang.json; sourceTree = "<group>"; };
+		786B6DA62BCC27DD003EB05F /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
+		786B6DA92BCC6849003EB05F /* BigBangModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBangModelDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +92,7 @@
 		786B6D572BCBCA59003EB05F = {
 			isa = PBXGroup;
 			children = (
+				786B6D982BCBCFFF003EB05F /* BigBangAPI */,
 				786B6D622BCBCA59003EB05F /* BigBangApp */,
 				786B6D732BCBCA5A003EB05F /* BigBangAppTests */,
 				786B6D7D2BCBCA5A003EB05F /* BigBangAppUITests */,
@@ -94,10 +113,10 @@
 		786B6D622BCBCA59003EB05F /* BigBangApp */ = {
 			isa = PBXGroup;
 			children = (
-				786B6D632BCBCA59003EB05F /* BigBangAppApp.swift */,
-				786B6D652BCBCA59003EB05F /* ContentView.swift */,
-				786B6D672BCBCA5A003EB05F /* Assets.xcassets */,
-				786B6D692BCBCA5A003EB05F /* Preview Content */,
+				786B6D902BCBCB10003EB05F /* Models */,
+				786B6D8D2BCBCA69003EB05F /* AppInit */,
+				786B6D8F2BCBCA97003EB05F /* Views */,
+				786B6D8E2BCBCA7F003EB05F /* Resources */,
 			);
 			path = BigBangApp;
 			sourceTree = "<group>";
@@ -125,6 +144,94 @@
 				786B6D802BCBCA5A003EB05F /* BigBangAppUITestsLaunchTests.swift */,
 			);
 			path = BigBangAppUITests;
+			sourceTree = "<group>";
+		};
+		786B6D8D2BCBCA69003EB05F /* AppInit */ = {
+			isa = PBXGroup;
+			children = (
+				786B6D632BCBCA59003EB05F /* BigBangAppApp.swift */,
+				786B6D962BCBCFCE003EB05F /* BigBangVM.swift */,
+			);
+			path = AppInit;
+			sourceTree = "<group>";
+		};
+		786B6D8E2BCBCA7F003EB05F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				786B6DA32BCBE8F9003EB05F /* BigBang.json */,
+				786B6D672BCBCA5A003EB05F /* Assets.xcassets */,
+				786B6D692BCBCA5A003EB05F /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		786B6D8F2BCBCA97003EB05F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				786B6D9D2BCBDCA1003EB05F /* ReusableComponents */,
+				786B6D942BCBCFAA003EB05F /* Main */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		786B6D902BCBCB10003EB05F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				786B6D912BCBCB2D003EB05F /* BigBangModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		786B6D942BCBCFAA003EB05F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				786B6D652BCBCA59003EB05F /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		786B6D982BCBCFFF003EB05F /* BigBangAPI */ = {
+			isa = PBXGroup;
+			children = (
+				786B6DA82BCC6828003EB05F /* DTOs */,
+				786B6D992BCBD183003EB05F /* DataInteractorProtocol.swift */,
+				786B6D9B2BCBD296003EB05F /* LocalDataInteractor.swift */,
+			);
+			path = BigBangAPI;
+			sourceTree = "<group>";
+		};
+		786B6D9D2BCBDCA1003EB05F /* ReusableComponents */ = {
+			isa = PBXGroup;
+			children = (
+				786B6DA52BCC27C7003EB05F /* CircularCheckBox */,
+				786B6D9E2BCBDCB1003EB05F /* SortingOptionButton */,
+			);
+			path = ReusableComponents;
+			sourceTree = "<group>";
+		};
+		786B6D9E2BCBDCB1003EB05F /* SortingOptionButton */ = {
+			isa = PBXGroup;
+			children = (
+				786B6D9F2BCBDCDE003EB05F /* OrderOptionsEnum.swift */,
+				786B6DA12BCBDE06003EB05F /* SortButtonView.swift */,
+			);
+			path = SortingOptionButton;
+			sourceTree = "<group>";
+		};
+		786B6DA52BCC27C7003EB05F /* CircularCheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				786B6DA62BCC27DD003EB05F /* CheckboxToggleStyle.swift */,
+			);
+			path = CircularCheckBox;
+			sourceTree = "<group>";
+		};
+		786B6DA82BCC6828003EB05F /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				786B6DA92BCC6849003EB05F /* BigBangModelDTO.swift */,
+			);
+			path = DTOs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				786B6D6B2BCBCA5A003EB05F /* Preview Assets.xcassets in Resources */,
+				786B6DA42BCBE8F9003EB05F /* BigBang.json in Resources */,
 				786B6D682BCBCA5A003EB05F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +365,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				786B6D662BCBCA59003EB05F /* ContentView.swift in Sources */,
+				786B6D9C2BCBD296003EB05F /* LocalDataInteractor.swift in Sources */,
+				786B6D9A2BCBD183003EB05F /* DataInteractorProtocol.swift in Sources */,
+				786B6DA02BCBDCDE003EB05F /* OrderOptionsEnum.swift in Sources */,
+				786B6D662BCBCA59003EB05F /* MainView.swift in Sources */,
+				786B6DAA2BCC6849003EB05F /* BigBangModelDTO.swift in Sources */,
 				786B6D642BCBCA59003EB05F /* BigBangAppApp.swift in Sources */,
+				786B6DA22BCBDE06003EB05F /* SortButtonView.swift in Sources */,
+				786B6D922BCBCB2D003EB05F /* BigBangModel.swift in Sources */,
+				786B6DA72BCC27DD003EB05F /* CheckboxToggleStyle.swift in Sources */,
+				786B6D972BCBCFCE003EB05F /* BigBangVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +537,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"BigBangApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"BigBangApp/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = NFHBGVPL44;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -450,7 +566,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"BigBangApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"BigBangApp/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = NFHBGVPL44;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
