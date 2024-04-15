@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct EpisodeDetail: View {
+    init(episode: BigBangModel) {
+        self.episode = episode
+        self._rating = .init(initialValue: episode.rating)
+        self._inputText = .init(initialValue: episode.comments)
+    }
+    
+    @Environment(\.dismiss) var dismiss
     @EnvironmentObject private var vm: BigBangVM
-    @State private var rating: Int = 0
+    @State private var rating: UInt8 = 0
     @State private var inputText: String = ""
     
     let episode: BigBangModel
@@ -31,10 +38,13 @@ struct EpisodeDetail: View {
             .padding()
             StarRatingView(rating: $rating)
             Button(action: {
-                vm.toggleEpisodeFavorite(episode: episode)
+                vm.saveCommentsAndRating(episode: episode, comments: inputText, rating: rating)
+                dismiss()
             }, label: {
                 Text("Save review and comments")
-            })
+            }).frame(height: 50)
+                .padding()
+                .buttonStyle(.borderedProminent)
             Spacer()
         }.toolbar {
             ToolbarItem(placement: .topBarTrailing) {

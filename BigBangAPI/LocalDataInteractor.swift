@@ -60,6 +60,10 @@ struct LocalDataInteractor: DataInteractorProtocol {
     
     func saveData<MODEL: Encodable>(data: [MODEL]) throws {
         let data = try JSONEncoder().encode(data)
-        try data.write(to: urlDoc, options: .atomic)
+        do {
+            try data.write(to: urlDoc, options: .atomic)
+        }catch {
+            print("🚩 NO SE HA PODIDO GUARDAR EL JSON")
+        }
     }
 }

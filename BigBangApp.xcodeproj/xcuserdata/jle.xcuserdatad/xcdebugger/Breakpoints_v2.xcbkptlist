@@ -114,6 +114,182 @@
             endingLineNumber = "164"
             landmarkName = "updateEpisode(episode:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7C6D5A4C-C1AF-4230-B229-085EC221A8E0 - d0e1e28f7ea02a4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BigBangApp.BigBangVM.updateEpisode(episode: BigBangApp.BigBangModel) -&gt; ()"
+                  moduleName = "BigBangApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jle/projects/Projects/SwiftBootcamp2024/apps/BootcampSwiftUIExercises/BigBangApp/BigBangApp/AppInit/BigBangVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "420">
+               </Location>
+               <Location
+                  uuid = "7C6D5A4C-C1AF-4230-B229-085EC221A8E0 - d0e1e28f7ea01cc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BigBangApp.BigBangVM.updateEpisode(episode: BigBangApp.BigBangModel) -&gt; ()"
+                  moduleName = "BigBangApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jle/projects/Projects/SwiftBootcamp2024/apps/BootcampSwiftUIExercises/BigBangApp/BigBangApp/AppInit/BigBangVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "164"
+                  endingLineNumber = "164"
+                  offsetFromSymbolStart = "420">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4BE493A0-8832-4391-A1C1-0FB6EA2C6FB1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BigBangApp/Views/Main/MainView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "bigBangSeriesList"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "4BE493A0-8832-4391-A1C1-0FB6EA2C6FB1 - 7edefa9546c8c88b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; SwiftUI.LazyVGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;BigBangApp.BigBangModel&gt;, BigBangApp.BigBangModel, SwiftUI.NavigationLink&lt;BigBangApp.EpisodeView, Swift.Never&gt;&gt;&gt; in closure #1 (Swift.Int) -&gt; SwiftUI.Section&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.LazyVGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;BigBangApp.BigBangModel&gt;, BigBangApp.BigBangModel, SwiftUI.NavigationLink&lt;BigBangApp.EpisodeView, Swift.Never&gt;&gt;&gt;, SwiftUI.EmptyView&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Int, SwiftUI.Section&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.LazyVGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;BigBangApp.BigBangModel&gt;, BigBangApp.BigBangModel, SwiftUI.NavigationLink&lt;BigBangApp.EpisodeView, Swift.Never&gt;&gt;&gt;, SwiftUI.EmptyView&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in BigBangApp.MainView.bigBangSeriesList.getter : SwiftUI.ScrollView&lt;some&gt;"
+                  moduleName = "BigBangApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jle/projects/Projects/SwiftBootcamp2024/apps/BootcampSwiftUIExercises/BigBangApp/BigBangApp/Views/Main/MainView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "4BE493A0-8832-4391-A1C1-0FB6EA2C6FB1 - bd1023fb9ac6f669"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;BigBangApp.BigBangModel&gt;, BigBangApp.BigBangModel, SwiftUI.NavigationLink&lt;BigBangApp.EpisodeView, Swift.Never&gt;&gt; in closure #2 () -&gt; SwiftUI.LazyVGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;BigBangApp.BigBangModel&gt;, BigBangApp.BigBangModel, SwiftUI.NavigationLink&lt;BigBangApp.EpisodeView, Swift.Never&gt;&gt;&gt; in closure #1 (Swift.Int) -&gt; SwiftUI.Section&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.LazyVGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;BigBangApp.BigBangModel&gt;, BigBangApp.BigBangModel, SwiftUI.NavigationLink&lt;BigBangApp.EpisodeView, Swift.Never&gt;&gt;&gt;, SwiftUI.EmptyView&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Int, SwiftUI.Section&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.LazyVGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;BigBangApp.BigBangModel&gt;, BigBangApp.BigBangModel, SwiftUI.NavigationLink&lt;BigBangApp.EpisodeView, Swift.Never&gt;&gt;&gt;, SwiftUI.EmptyView&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in BigBangApp.MainView.bigBangSeriesList.getter : SwiftUI.ScrollView&lt;some&gt;"
+                  moduleName = "BigBangApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jle/projects/Projects/SwiftBootcamp2024/apps/BootcampSwiftUIExercises/BigBangApp/BigBangApp/Views/Main/MainView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "224">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F0172DF6-7765-44A7-B88B-69C44B59E297"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BigBangAPI/LocalDataInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "saveData(data:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F4A0260-ECAD-4E80-84EB-9AB1D53CB840"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BigBangApp/Views/Main/MainView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "bigBangSeriesList"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B32B155-AA45-4F70-A4F4-49F92F321F73"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BigBangApp/Views/Main/MainView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "bigBangSeriesList"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "4B32B155-AA45-4F70-A4F4-49F92F321F73 - 9aeeb63eb5868a00"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (BigBangApp.BigBangModel) -&gt; SwiftUI.NavigationLink&lt;BigBangApp.EpisodeView, Swift.Never&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;BigBangApp.BigBangModel&gt;, BigBangApp.BigBangModel, SwiftUI.NavigationLink&lt;BigBangApp.EpisodeView, Swift.Never&gt;&gt; in closure #2 () -&gt; SwiftUI.LazyVGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;BigBangApp.BigBangModel&gt;, BigBangApp.BigBangModel, SwiftUI.NavigationLink&lt;BigBangApp.EpisodeView, Swift.Never&gt;&gt;&gt; in closure #1 (Swift.Int) -&gt; SwiftUI.Section&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.LazyVGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;BigBangApp.BigBangModel&gt;, BigBangApp.BigBangModel, SwiftUI.NavigationLink&lt;BigBangApp.EpisodeView, Swift.Never&gt;&gt;&gt;, SwiftUI.EmptyView&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Int, SwiftUI.Section&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.LazyVGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;BigBangApp.BigBangModel&gt;, BigBangApp.BigBangModel, SwiftUI.NavigationLink&lt;BigBangApp.EpisodeView, Swift.Never&gt;&gt;&gt;, SwiftUI.EmptyView&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in BigBangApp.MainView.bigBangSeriesList.getter : SwiftUI.ScrollView&lt;some&gt;"
+                  moduleName = "BigBangApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jle/projects/Projects/SwiftBootcamp2024/apps/BootcampSwiftUIExercises/BigBangApp/BigBangApp/Views/Main/MainView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  uuid = "4B32B155-AA45-4F70-A4F4-49F92F321F73 - 5244cfb0bf4dbc3d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; BigBangApp.EpisodeView in closure #1 (BigBangApp.BigBangModel) -&gt; SwiftUI.NavigationLink&lt;BigBangApp.EpisodeView, Swift.Never&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;BigBangApp.BigBangModel&gt;, BigBangApp.BigBangModel, SwiftUI.NavigationLink&lt;BigBangApp.EpisodeView, Swift.Never&gt;&gt; in closure #2 () -&gt; SwiftUI.LazyVGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;BigBangApp.BigBangModel&gt;, BigBangApp.BigBangModel, SwiftUI.NavigationLink&lt;BigBangApp.EpisodeView, Swift.Never&gt;&gt;&gt; in closure #1 (Swift.Int) -&gt; SwiftUI.Section&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.LazyVGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;BigBangApp.BigBangModel&gt;, BigBangApp.BigBangModel, SwiftUI.NavigationLink&lt;BigBangApp.EpisodeView, Swift.Never&gt;&gt;&gt;, SwiftUI.EmptyView&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Int, SwiftUI.Section&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.LazyVGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;BigBangApp.BigBangModel&gt;, BigBangApp.BigBangModel, SwiftUI.NavigationLink&lt;BigBangApp.EpisodeView, Swift.Never&gt;&gt;&gt;, SwiftUI.EmptyView&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in BigBangApp.MainView.bigBangSeriesList.getter : SwiftUI.ScrollView&lt;some&gt;"
+                  moduleName = "BigBangApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jle/projects/Projects/SwiftBootcamp2024/apps/BootcampSwiftUIExercises/BigBangApp/BigBangApp/Views/Main/MainView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "184">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF92F2C3-4898-4593-A4A0-A3D858DF9AA1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BigBangApp/Views/Detail/EpisodeDetail.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

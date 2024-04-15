@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct StarRatingView: View {
-    @Binding var rating: Int
+    @Binding var rating: UInt8
     
     var label = ""
-    var maximumRating = 5
+    var maximumRating:UInt8 = 5
     
     var offImage: Image? = Image(systemName: "star.fill")
     var onImage = Image(systemName: "star.fill")
@@ -28,13 +28,13 @@ struct StarRatingView: View {
                 image(for: number)
                     .foregroundColor(number > rating ? offColor : onColor)
                     .onTapGesture {
-                        rating = number
+                        rating = UInt8(number)
                     }
             }
         }
     }
     
-    private func image(for number: Int) -> Image {
+    private func image(for number: UInt8) -> Image {
         if number > rating {
             return offImage ?? onImage
         } else {
