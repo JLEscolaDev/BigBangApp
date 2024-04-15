@@ -9,6 +9,7 @@ import SwiftUI
 
 
 let bigBangDataShared = LocalDataInteractor(jsonFileName: "BigBang")
+let bigBangDataTest = LocalDataInteractor(jsonFileName: "BigBangTest")
 
 
 final class BigBangVM: ObservableObject {
@@ -21,6 +22,7 @@ final class BigBangVM: ObservableObject {
     }
     @Published var search = ""
     @Published var sorted: OrderOptionsEnum = .bySeasonAsc
+    @Published var showFavorites: Bool = false
     @Published var seasonCheckedState: [Int: Bool] = [:]
     
     
@@ -70,7 +72,13 @@ final class BigBangVM: ObservableObject {
             } else {
                 episode.name.localizedStandardContains(search)
             }
-        }
+        }.filter({ episode in
+            if showFavorites {
+                episode.favorite
+            }else {
+                true
+            }
+        })
     }
     
     init(interactor: LocalDataInteractor = bigBangDataShared) {
@@ -106,7 +114,47 @@ final class BigBangVM: ObservableObject {
             image: episode.image,
             summary: episode.summary,
             favorite: episode.favorite,
-            seen: seen
+            seen: seen,
+            comments: episode.comments,
+            rating: episode.rating
+        )
+        updateEpisode(episode: newModel)
+    }
+    
+    func toggleEpisodeFavorite(episode: BigBangModel) {
+        let newModel = BigBangModel(
+            id: episode.id,
+            url: episode.url,
+            name: episode.name,
+            season: episode.season,
+            number: episode.number,
+            airDate: episode.airDate,
+            runtime: episode.runtime,
+            image: episode.image,
+            summary: episode.summary,
+            favorite: !episode.favorite,
+            seen: episode.seen,
+            comments: episode.comments,
+            rating: episode.rating
+        )
+        updateEpisode(episode: newModel)
+    }
+    
+    func saveCommentsAndRating(episode: BigBangModel, comments: String, rating: UInt8) {
+        let newModel = BigBangModel(
+            id: episode.id,
+            url: episode.url,
+            name: episode.name,
+            season: episode.season,
+            number: episode.number,
+            airDate: episode.airDate,
+            runtime: episode.runtime,
+            image: episode.image,
+            summary: episode.summary,
+            favorite: !episode.favorite,
+            seen: episode.seen,
+            comments: comments,
+            rating: rating
         )
         updateEpisode(episode: newModel)
     }

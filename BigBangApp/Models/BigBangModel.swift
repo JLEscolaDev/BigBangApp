@@ -8,7 +8,7 @@
 import Foundation
 
 struct BigBangModel: Codable, Hashable {
-    init(id: Int, url: URL, name: String, season: Int, number: Int, airDate: String, runtime: Int, image: String, summary: String, favorite: Bool, seen: Bool) {
+    init(id: Int, url: URL, name: String, season: Int, number: Int, airDate: String, runtime: Int, image: String, summary: String, favorite: Bool, seen: Bool, comments: String, rating: UInt8) {
         self.id = id
         self.url = url
         self.name = name
@@ -20,7 +20,10 @@ struct BigBangModel: Codable, Hashable {
         self.summary = summary
         self.favorite = favorite
         self.seen = seen
+        self.comments = comments
+        self.rating = rating
     }
+    
     
     let id: Int
     let url: URL
@@ -32,6 +35,8 @@ struct BigBangModel: Codable, Hashable {
     let summary: String
     let favorite: Bool
     let seen: Bool
+    let comments: String
+    let rating: UInt8
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -45,6 +50,8 @@ struct BigBangModel: Codable, Hashable {
         case summary
         case favorite
         case seen
+        case comments
+        case rating
     }
     
     init(from decoder: Decoder) throws {
@@ -61,6 +68,8 @@ struct BigBangModel: Codable, Hashable {
         self.summary = try container.decode(String.self, forKey: BigBangModel.CodingKeys.summary)
         self.favorite = try container.decode(Bool.self, forKey: BigBangModel.CodingKeys.favorite)
         self.seen = try container.decode(Bool.self, forKey: BigBangModel.CodingKeys.seen)
+        self.comments = try container.decode(String.self, forKey: BigBangModel.CodingKeys.comments)
+        self.rating = try container.decode(UInt8.self, forKey: BigBangModel.CodingKeys.rating)
         
     }
     
@@ -78,6 +87,8 @@ struct BigBangModel: Codable, Hashable {
         try container.encode(self.summary, forKey: BigBangModel.CodingKeys.summary)
         try container.encode(self.favorite, forKey: BigBangModel.CodingKeys.favorite)
         try container.encode(self.seen, forKey: BigBangModel.CodingKeys.seen)
+        try container.encode(self.comments, forKey: BigBangModel.CodingKeys.comments)
+        try container.encode(self.rating, forKey: BigBangModel.CodingKeys.rating)
     }
     
     

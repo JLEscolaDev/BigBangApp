@@ -23,6 +23,11 @@
 		786B6DA42BCBE8F9003EB05F /* BigBang.json in Resources */ = {isa = PBXBuildFile; fileRef = 786B6DA32BCBE8F9003EB05F /* BigBang.json */; };
 		786B6DA72BCC27DD003EB05F /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B6DA62BCC27DD003EB05F /* CheckboxToggleStyle.swift */; };
 		786B6DAA2BCC6849003EB05F /* BigBangModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B6DA92BCC6849003EB05F /* BigBangModelDTO.swift */; };
+		787101852BCD436E00941480 /* BigBangTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 787101842BCD436E00941480 /* BigBangTest.json */; };
+		787101882BCD5B6600941480 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787101872BCD5B6600941480 /* StarRatingView.swift */; };
+		7871018A2BCD5C2F00941480 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787101892BCD5C2F00941480 /* RatingView.swift */; };
+		7871018F2BCD725500941480 /* EpisodeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7871018E2BCD725500941480 /* EpisodeDetail.swift */; };
+		787101912BCD749700941480 /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787101902BCD749700941480 /* EpisodeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +67,11 @@
 		786B6DA32BCBE8F9003EB05F /* BigBang.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BigBang.json; sourceTree = "<group>"; };
 		786B6DA62BCC27DD003EB05F /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
 		786B6DA92BCC6849003EB05F /* BigBangModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBangModelDTO.swift; sourceTree = "<group>"; };
+		787101842BCD436E00941480 /* BigBangTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BigBangTest.json; sourceTree = "<group>"; };
+		787101872BCD5B6600941480 /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
+		787101892BCD5C2F00941480 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		7871018E2BCD725500941480 /* EpisodeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetail.swift; sourceTree = "<group>"; };
+		787101902BCD749700941480 /* EpisodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +123,7 @@
 		786B6D622BCBCA59003EB05F /* BigBangApp */ = {
 			isa = PBXGroup;
 			children = (
+				787101812BCD3F0A00941480 /* Utils */,
 				786B6D902BCBCB10003EB05F /* Models */,
 				786B6D8D2BCBCA69003EB05F /* AppInit */,
 				786B6D8F2BCBCA97003EB05F /* Views */,
@@ -124,6 +135,7 @@
 		786B6D692BCBCA5A003EB05F /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				787101842BCD436E00941480 /* BigBangTest.json */,
 				786B6D6A2BCBCA5A003EB05F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -168,6 +180,7 @@
 		786B6D8F2BCBCA97003EB05F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7871018B2BCD723000941480 /* Detail */,
 				786B6D9D2BCBDCA1003EB05F /* ReusableComponents */,
 				786B6D942BCBCFAA003EB05F /* Main */,
 			);
@@ -186,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				786B6D652BCBCA59003EB05F /* MainView.swift */,
+				787101902BCD749700941480 /* EpisodeView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -203,6 +217,7 @@
 		786B6D9D2BCBDCA1003EB05F /* ReusableComponents */ = {
 			isa = PBXGroup;
 			children = (
+				787101862BCD5B5000941480 /* 5StarsRating */,
 				786B6DA52BCC27C7003EB05F /* CircularCheckBox */,
 				786B6D9E2BCBDCB1003EB05F /* SortingOptionButton */,
 			);
@@ -232,6 +247,30 @@
 				786B6DA92BCC6849003EB05F /* BigBangModelDTO.swift */,
 			);
 			path = DTOs;
+			sourceTree = "<group>";
+		};
+		787101812BCD3F0A00941480 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		787101862BCD5B5000941480 /* 5StarsRating */ = {
+			isa = PBXGroup;
+			children = (
+				787101872BCD5B6600941480 /* StarRatingView.swift */,
+				787101892BCD5C2F00941480 /* RatingView.swift */,
+			);
+			path = 5StarsRating;
+			sourceTree = "<group>";
+		};
+		7871018B2BCD723000941480 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				7871018E2BCD725500941480 /* EpisodeDetail.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +379,7 @@
 			files = (
 				786B6D6B2BCBCA5A003EB05F /* Preview Assets.xcassets in Resources */,
 				786B6DA42BCBE8F9003EB05F /* BigBang.json in Resources */,
+				787101852BCD436E00941480 /* BigBangTest.json in Resources */,
 				786B6D682BCBCA5A003EB05F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,12 +405,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7871018F2BCD725500941480 /* EpisodeDetail.swift in Sources */,
 				786B6D9C2BCBD296003EB05F /* LocalDataInteractor.swift in Sources */,
+				787101882BCD5B6600941480 /* StarRatingView.swift in Sources */,
 				786B6D9A2BCBD183003EB05F /* DataInteractorProtocol.swift in Sources */,
+				787101912BCD749700941480 /* EpisodeView.swift in Sources */,
 				786B6DA02BCBDCDE003EB05F /* OrderOptionsEnum.swift in Sources */,
 				786B6D662BCBCA59003EB05F /* MainView.swift in Sources */,
 				786B6DAA2BCC6849003EB05F /* BigBangModelDTO.swift in Sources */,
 				786B6D642BCBCA59003EB05F /* BigBangAppApp.swift in Sources */,
+				7871018A2BCD5C2F00941480 /* RatingView.swift in Sources */,
 				786B6DA22BCBDE06003EB05F /* SortButtonView.swift in Sources */,
 				786B6D922BCBCB2D003EB05F /* BigBangModel.swift in Sources */,
 				786B6DA72BCC27DD003EB05F /* CheckboxToggleStyle.swift in Sources */,

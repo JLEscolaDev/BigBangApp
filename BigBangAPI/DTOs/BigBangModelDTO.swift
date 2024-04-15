@@ -71,7 +71,9 @@ struct BigBangModelDTO: Codable, Hashable, ModelConvertible {
             image: self.image,
             summary: self.summary,
             favorite: false,
-            seen: false
+            seen: false,
+            comments: "",
+            rating: 0
         )
     }
     

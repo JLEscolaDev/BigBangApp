@@ -17,9 +17,7 @@ struct CheckboxToggleStyle: ToggleStyle {
                     Image(systemName: configuration.isOn ? "checkmark" : "")
                 }
                 .onTapGesture {
-                    withAnimation {
-                        configuration.isOn.toggle()
-                    }
+                    configuration.isOn.toggle()
                 }
                 .foregroundStyle(configuration.isOn ? .blue : .gray.opacity(0.6))
  

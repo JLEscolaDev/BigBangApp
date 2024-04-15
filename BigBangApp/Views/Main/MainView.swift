@@ -5,130 +5,103 @@
 //  Created by Jose Luis Escolá García on 14/4/24.
 //
 
+
+//TODO:
+//    Acabar el completar el visto en toda una season
+//    Arreglar el tap en el checkbox para no tener que darle dos veces para cambiar de estado y a la estrella del detalle
+//
+//  ✅  Añadir botón de favoritos en la navigation bar que filtre los episodios por favoritos
+//    Crear pantalla de detalle del episodio en el que pueda guardar: favorito, valoración de 1 a 5 estrellas y un texto libre.
+//Extra: Modificar la navegación para que el pulsar en el checkbox no detecte también el tap de la celda
+//Extra: Modificar las secciones para poder pulsar en ellas y que se oculten los episodios
+//Extra: Modificar las secciones de las seasons para usar también las portadas/imágenes.
+//Extra: Crear una vista que muestre la imagen principal de la serie con un gauge del porcentaje que llevas visto de la serie.
 import SwiftUI
 
 struct MainView: View {
-    let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
+    @State private var width: CGFloat = 0
+    var columns: [GridItem] {
+        let count = width > 600 ? 3 : 2
+        return Array(repeating: .init(.flexible()), count: count)
+    }
     
     @EnvironmentObject private var vm: BigBangVM
     
+    
     var body: some View {
-        NavigationStack {
-            Group {
-                if vm.episodesBySeason.count > 0 {
-                    ScrollView {
-                        VStack(alignment: .leading) {
-                            ForEach(vm.episodesBySeason.keys.sorted(), id: \.self) { season in
-                                Section(header: HStack {
-                                    Text("Season \(season)")
-                                    Spacer()
-                                    Toggle(isOn: Binding(
-                                        get: { self.vm.seasonCheckedState[season] ?? false },
-                                        set: { self.vm.seasonCheckedState[season] = $0 }
-                                    )) {
-                                        Text("Season watched")
-                                    }
-                                    .toggleStyle(.checkmark)
-                                    .padding(.trailing, 5)
-                                }) {
-                                    LazyVGrid(columns: columns, spacing: 20) {
-                                        ForEach(vm.episodesBySeason[season] ?? [], id: \.self) { episode in
-                                            NavigationLink(value: episode) {
-                                                EpisodeView(episode: episode)
-                                            }
-                                        }
-                                    }
+        GeometryReader { geometry in
+            NavigationStack {
+                Group {
+                    if vm.episodesBySeason.count > 0 {
+                        bigBangSeriesList
+                    } else if !vm.search.isEmpty {
+                        ContentUnavailableView("No episodes found",
+                                               systemImage: "movieclapper",
+                                               description: Text("There's no episodes that contains the string '**\(vm.search)**'."))
+                    } else {
+                        ContentUnavailableView("No episodes found",
+                                               systemImage: "movieclapper")
+                    }
+                }
+                .navigationTitle("Big Bang Episodes")
+                .navigationDestination(for: BigBangModel.self) { episode in
+                    EpisodeDetail(episode: episode)
+                }
+                .searchable(text: $vm.search)
+                .sortButton(sorted: $vm.sorted)
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button(action: {
+                            vm.showFavorites.toggle()
+                        }, label: {
+                            Image(systemName: "star.fill").foregroundStyle(.yellow)
+                        })
+                        
+                    }
+                }
+            }.onAppear {
+                width = geometry.size.width
+            }
+            .onChange(of: geometry.size.width) { _, newWidth in
+                width = newWidth
+            }
+        }
+    }
+    
+    private var bigBangSeriesList: ScrollView<some View> {
+        ScrollView {
+            VStack(alignment: .leading) {
+                ForEach(vm.episodesBySeason.keys.sorted(), id: \.self) { season in
+                    Section(header:
+                        HStack {
+                            Text("Season \(season)")
+                            Spacer()
+                            Toggle(isOn: Binding(
+                                get: { self.vm.seasonCheckedState[season] ?? false },
+                                set: { self.vm.seasonCheckedState[season] = $0 }
+                            )) {
+                                Text("Season watched")
+                            }
+                            .toggleStyle(.checkmark)
+                            .padding(.trailing, 5)
+                        }.padding(.vertical, 10)
+                    ) {
+                        LazyVGrid(columns: columns, spacing: 20) {
+                            ForEach(vm.episodesBySeason[season] ?? [], id: \.self) { episode in
+                                NavigationLink(value: episode) {
+                                    EpisodeView(episode: episode)
                                 }
                             }
-
                         }
-                        .padding()
                     }
-                } else if !vm.search.isEmpty {
-                    ContentUnavailableView("No episodes found",
-                                           systemImage: "movieclapper",
-                                           description: Text("There's no episodes that contains the string '**\(vm.search)**'."))
-                } else {
-                    ContentUnavailableView("No episodes found",
-                                           systemImage: "movieclapper")
                 }
+                
             }
-            .navigationTitle("Big Bang Episodes")
-            .navigationDestination(for: BigBangModel.self) { data in
-                Text(data.name) // Adjust this as needed to show detailed view
-            }
-            .searchable(text: $vm.search)
-            .sortButton(sorted: $vm.sorted)
+            .padding()
         }
     }
 }
 
 #Preview {
     MainView()
-}
-
-
-
-
-
-
-
-struct EpisodeView: View {
-    let episode: BigBangModel
-    @EnvironmentObject private var vm: BigBangVM
-    
-    @State private var isChecked: Bool = false
-    
-    var body: some View {
-        HStack(spacing: 5) {
-            image
-            episodeSeenCheckBox
-        }.background(
-            RoundedRectangle(cornerRadius: 15)
-                .stroke(isChecked ? .blue : .gray.opacity(0.6), lineWidth: 2)
-        )
-        .clipShape(RoundedRectangle(cornerRadius: 15))
-        .onChange(of: isChecked) { _, newValue in
-            vm.updateEpisodeSeen(newValue, episode: episode)
-        }
-    }
-    
-    /// Image that displays the episode image or a placeholder if the image is not available
-    private var image: some View {
-        getImage(episode.image)
-            .resizable()
-            .scaledToFill()
-            .frame(height: 100)
-            .overlay {
-                Rectangle().foregroundStyle(.black.opacity(0.7))
-            }
-            .overlay {
-                Text(episode.name)
-                    .fontWeight(.bold)
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50)
-                    .foregroundColor(.white)
-                    .padding(.all, 10)
-            }
-            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-    }
-    
-    /// VStack that holds a custom rounded checkBox and the episode number on top
-    private var episodeSeenCheckBox: some View {
-        VStack(alignment: .leading) {
-            Text(String(episode.number))
-                .fontWeight(.semibold)
-            Toggle(isOn: $isChecked) {
-            }
-            .toggleStyle(.checkmark)
-            .padding(.trailing, 5)
-        }
-    }
-    
-    func getImage(_ imageResourceRef: String) -> Image {
-        if let image = UIImage(named: imageResourceRef) {
-            return Image(uiImage: image)
-        } else {
-            return Image(systemName: "photo.tv")
-        }
-    }
 }
