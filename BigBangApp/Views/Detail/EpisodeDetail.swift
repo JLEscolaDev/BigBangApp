@@ -25,28 +25,11 @@ struct EpisodeDetail: View {
     
     var body: some View {
         VStack {
-            Image(episode.image)
-                .resizable()
-                .scaledToFill()
-                .frame(height: 300)
-                .padding(.bottom, 30)
-            Text(episode.name)
-                .font(.title)
-            VStack {
-                TextField("Describe yourself", text: $inputText, axis: .vertical)
-                    .textFieldStyle(.roundedBorder)
-                    .lineLimit(5, reservesSpace: true)
-            }
-            .padding()
+            episodeImage
+            episodeTitle
+            comments
             StarRatingView(rating: $rating)
-            Button(action: {
-                vm.saveCommentsAndRating(episode: episode, comments: inputText, rating: rating)
-                dismiss()
-            }, label: {
-                Text("Save review and comments")
-            }).frame(height: 50)
-                .padding()
-                .buttonStyle(.borderedProminent)
+            saveButton
             Spacer()
         }.toolbar {
             ToolbarItem(placement: .topBarTrailing) {
@@ -66,8 +49,41 @@ struct EpisodeDetail: View {
             }
         }
     }
+    
+    private var episodeImage: some View {
+        Image(episode.image)
+            .resizable()
+            .scaledToFill()
+            .frame(height: 300)
+            .padding(.bottom, 30)
+    }
+    
+    private var episodeTitle: some View {
+        Text(episode.name)
+            .font(.title)
+    }
+    
+    private var comments: some View {
+        VStack {
+            TextField("Describe yourself", text: $inputText, axis: .vertical)
+                .textFieldStyle(.roundedBorder)
+                .lineLimit(5, reservesSpace: true)
+        }
+        .padding()
+    }
+    
+    private var saveButton: some View {
+        Button(action: {
+            vm.saveCommentsAndRating(episode: episode, comments: inputText, rating: rating)
+            dismiss()
+        }, label: {
+            Text("Save review and comments")
+        }).frame(height: 50)
+            .padding()
+            .buttonStyle(.borderedProminent)
+    }
 }
 
-//#Preview {
-//    EpisodeDetail(rating: 3, episode: )
-//}
+#Preview {
+    EpisodeDetail.preview
+}

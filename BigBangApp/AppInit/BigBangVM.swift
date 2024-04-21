@@ -7,26 +7,34 @@
 
 import SwiftUI
 
-//extension BigBangVM {
-//    convenience init(forTesting: Bool = false) {
-//        if forTesting {
-//            self.init(interactor: LocalDataInteractor(jsonFileName: "BigBangTest"))
-//        } else {
-//            self.init(interactor: LocalDataInteractor(jsonFileName: "BigBang"))
-//        }
-//    }
-//    
-//    enum DataInteractorType: String {
-//        case prod = "BigBang"
-//        case testing = "BigBangTest"
-//    }
-//}
-
-let bigBangDataShared = LocalDataInteractor(jsonFileName: "BigBang")
-let bigBangDataTest = LocalDataInteractor(jsonFileName: "BigBangTest")
+extension BigBangVM {
+    static let shared = LocalDataInteractor(for: DevelopmentPhase.prod)
+    
+    enum DevelopmentPhase: String, DevelopmentConfigurable {
+        case dev = "BigBangTest"
+        case prod = "BigBang"
+        
+        var jsonFileName: String {
+            return self.rawValue
+        }
+    }
+}
 
 final class BigBangVM: ObservableObject {
     private let interactor: LocalDataInteractor
+    
+    init(interactor: LocalDataInteractor = BigBangVM.shared) {
+        self.interactor = interactor
+        do {
+            self.episodes = try interactor.loadDataFromDTO(type: BigBangModelDTO.self)
+        } catch {
+            self.episodes = []
+            print(error)
+        }
+        for season in Set(episodes.map(\.season)) {
+            seasonCheckedState[season] = false
+        }
+    }
     
     @Published var episodes: [BigBangModel] {
         didSet {
@@ -92,22 +100,6 @@ final class BigBangVM: ObservableObject {
                 true
             }
         })
-    }
-    
-    init(interactor: LocalDataInteractor = bigBangDataShared) {
-        self.interactor = interactor
-        do {
-            self.episodes = try interactor.loadDataFromDTO(type: BigBangModelDTO.self)
-        } catch {
-            self.episodes = []
-            print(error)
-        }
-        for season in Set(episodes.map(\.season)) {
-            seasonCheckedState[season] = false
-        }
-//        let seasonSeen = self.episodesBySeason[1].map({
-//            $0.seen = true
-//        })
     }
     
     func setSeasonSeenStatus(to seenStatus: Bool, forSeason season: Int) {

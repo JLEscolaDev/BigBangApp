@@ -35,7 +35,7 @@ struct EpisodeView: View {
         getImage(episode.image)
             .resizable()
             .frame(minWidth: 0, maxWidth: .infinity) // Ensures the cell takes up as much width as possible
-                   .aspectRatio(1/1, contentMode: .fill) // Ensures the cell proportion to not overlap with the other cells
+            .aspectRatio(1/1, contentMode: .fill) // Ensures the cell proportion to not overlap with the other cells
             .overlay {
                 Rectangle().foregroundStyle(.black.opacity(0.7))
             }
@@ -75,11 +75,6 @@ struct EpisodeView: View {
 
 
 #Preview {
-    let vm = BigBangVM(interactor: bigBangDataTest)
-    return if let episode = vm.episodesBySeason.first?.value.first {
-        EpisodeView(episode: episode).environmentObject(vm)
-    }else {
-        Text("Failure in the preview. Data missing")
-    }
+    EpisodeView.preview
 }
 

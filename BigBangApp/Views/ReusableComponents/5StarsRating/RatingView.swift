@@ -35,30 +35,16 @@ struct RatingView: View {
     }
     
     private func image(for number: Int) -> Image {
-        let starImage: Image
+        let image: Image
         if number > rating {
-            starImage = offImage ?? onImage
+            image = offImage ?? onImage
         } else {
-            starImage = onImage
+            image = onImage
         }
-        return starImage.renderingMode(.template)
+        return image.renderingMode(.template)
     }
 }
 
 #Preview {
-    RatingView(
-        rating: .constant(2),
-        label: "Rate my view",
-        maximumRating: 5,
-        offImage: Image(
-            systemName: "star"
-        ),
-        onImage: Image(
-            systemName: "star.fill"
-        ),
-        offColor: .gray.opacity(
-            0.5
-        ),
-        onColor: .yellow
-    )
+    RatingView.preview
 }

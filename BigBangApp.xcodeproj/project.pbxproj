@@ -28,6 +28,7 @@
 		7871018A2BCD5C2F00941480 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787101892BCD5C2F00941480 /* RatingView.swift */; };
 		7871018F2BCD725500941480 /* EpisodeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7871018E2BCD725500941480 /* EpisodeDetail.swift */; };
 		787101912BCD749700941480 /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787101902BCD749700941480 /* EpisodeView.swift */; };
+		787AC6B22BD53C3E003B8A42 /* Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787AC6B12BD53C3E003B8A42 /* Previews.swift */; };
 		789F33E12BD49B8A00BAB2A5 /* SerieProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F33E02BD49B8A00BAB2A5 /* SerieProgressView.swift */; };
 		789F33E42BD4A01400BAB2A5 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F33E32BD4A01400BAB2A5 /* CircularProgressView.swift */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		787101892BCD5C2F00941480 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		7871018E2BCD725500941480 /* EpisodeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetail.swift; sourceTree = "<group>"; };
 		787101902BCD749700941480 /* EpisodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeView.swift; sourceTree = "<group>"; };
+		787AC6B12BD53C3E003B8A42 /* Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previews.swift; sourceTree = "<group>"; };
 		789F33E02BD49B8A00BAB2A5 /* SerieProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieProgressView.swift; sourceTree = "<group>"; };
 		789F33E32BD4A01400BAB2A5 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +143,7 @@
 			children = (
 				787101842BCD436E00941480 /* BigBangTest.json */,
 				786B6D6A2BCBCA5A003EB05F /* Preview Assets.xcassets */,
+				787AC6B12BD53C3E003B8A42 /* Previews.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				789F33E12BD49B8A00BAB2A5 /* SerieProgressView.swift in Sources */,
 				786B6D9C2BCBD296003EB05F /* LocalDataInteractor.swift in Sources */,
 				787101882BCD5B6600941480 /* StarRatingView.swift in Sources */,
+				787AC6B22BD53C3E003B8A42 /* Previews.swift in Sources */,
 				786B6D9A2BCBD183003EB05F /* DataInteractorProtocol.swift in Sources */,
 				787101912BCD749700941480 /* EpisodeView.swift in Sources */,
 				786B6DA02BCBDCDE003EB05F /* OrderOptionsEnum.swift in Sources */,

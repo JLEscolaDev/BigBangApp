@@ -30,5 +30,5 @@ struct SerieProgressView: View {
 }
 
 #Preview {
-    SerieProgressView(progress: 0.25).frame(width: 500, height: 500)
+    SerieProgressView.preview
 }

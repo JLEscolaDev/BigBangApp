@@ -7,8 +7,16 @@
 
 import Foundation
 
+protocol DevelopmentConfigurable {
+    var jsonFileName: String { get }
+}
+
 struct LocalDataInteractor: DataInteractorProtocol {
     let jsonFileName: String
+    
+    init(for developmentPhase: DevelopmentConfigurable) {
+        self.jsonFileName = developmentPhase.jsonFileName
+    }
     
     var urlDoc: URL {
         if #available(iOS 16.0, *) {

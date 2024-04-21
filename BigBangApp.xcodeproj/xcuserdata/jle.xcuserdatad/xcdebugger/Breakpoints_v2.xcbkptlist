@@ -14,8 +14,8 @@
             filePath = "BigBangAPI/LocalDataInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "loadDataFromDTO(type:)"
             landmarkType = "7">
             <Locations>
@@ -62,8 +62,8 @@
             filePath = "BigBangAPI/LocalDataInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "loadDataFromDTO(type:)"
             landmarkType = "7">
             <Locations>
@@ -110,8 +110,8 @@
             filePath = "BigBangAPI/LocalDataInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "saveData(data:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -120,7 +120,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EF92F2C3-4898-4593-A4A0-A3D858DF9AA1"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BigBangApp/Views/Detail/EpisodeDetail.swift"
@@ -130,6 +130,38 @@
             endingLineNumber = "27"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "EF92F2C3-4898-4593-A4A0-A3D858DF9AA1 - aa84c8f47619c962"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BigBangApp.EpisodeDetail.body.getter : some"
+                  moduleName = "BigBangApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jle/projects/Projects/SwiftBootcamp2024/apps/BootcampSwiftUIExercises/BigBangApp/BigBangApp/Views/Detail/EpisodeDetail.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "EF92F2C3-4898-4593-A4A0-A3D858DF9AA1 - 519b7b446cb48894"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, BigBangApp.StarRatingView, &lt;&lt;opaque return type of SwiftUI.View.buttonStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PrimitiveButtonStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt; in BigBangApp.EpisodeDetail.body.getter : some"
+                  moduleName = "BigBangApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jle/projects/Projects/SwiftBootcamp2024/apps/BootcampSwiftUIExercises/BigBangApp/BigBangApp/Views/Detail/EpisodeDetail.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "764">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -142,8 +174,8 @@
             filePath = "BigBangApp/AppInit/BigBangVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "episodes"
             landmarkType = "24">
          </BreakpointContent>
@@ -158,8 +190,8 @@
             filePath = "BigBangAPI/LocalDataInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "loadDataFromDTO(type:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -174,8 +206,8 @@
             filePath = "BigBangAPI/LocalDataInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "loadData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +222,8 @@
             filePath = "BigBangAPI/LocalDataInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "loadData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -206,8 +238,8 @@
             filePath = "BigBangApp/Views/Detail/EpisodeDetail.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -269,8 +301,8 @@
             filePath = "BigBangApp/Views/Detail/EpisodeDetail.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -343,14 +375,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "AB8D0781-8372-4E05-8826-C38FFF3C8DAD"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BigBangApp/AppInit/BigBangVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "getSerieTotalProgress()"
             landmarkType = "7">
          </BreakpointContent>

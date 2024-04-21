@@ -44,8 +44,5 @@ struct StarRatingView: View {
 }
 
 #Preview {
-    StarRatingView(
-        rating: .constant(2),
-        label: "Rate my view"
-    )
+    StarRatingView.preview
 }

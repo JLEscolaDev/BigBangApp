@@ -63,61 +63,78 @@ struct MainView: View {
             VStack(alignment: .leading) {
                 ForEach(vm.episodesBySeason.keys.sorted(), id: \.self) { season in
                     Section(header:
-                        HStack {
-                            Text("Season \(season)")
-                        NavigationLink(destination: SerieProgressView(progress: vm.getSerieTotalProgress())) {
-                            Group {
-                                if let image = UIImage(named: "season\(season)") {
-                                    Image(uiImage: image)
-                                } else {
-                                    Image(systemName: "photo")
-                                }
-                            }
-                            .scaledToFit()
-                            .frame(height: 35)
-                            .overlay {
-                                Rectangle().foregroundStyle(.black.opacity(0.7))
-                            }
-                            .overlay {
-                                Text(vm.getProgressText(for: season))
-                                    .fontWeight(.bold)
-                                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50)
-                                    .foregroundColor(.white)
-                                    .padding(.all, 10)
-                            }
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                        }
-                            
-                            
-                            Spacer()
-                            if !vm.showFavorites {
-                                Toggle(isOn: Binding(
-                                    get: { vm.getSeasonSeenStatus(season: season) },
-                                    set: { vm.setSeasonSeenStatus(to: $0, forSeason: season) }
-                                )) {
-                                    Text("Season watched")
-                                }
-                                .toggleStyle(.checkmark)
-                                .padding(.trailing, 5)
-                            }
-                        }.padding(.vertical, 10)
+                        seasonSection(for: season)
                     ) {
-                        LazyVGrid(columns: columns, spacing: 20) {
-                            ForEach(vm.episodesBySeason[season] ?? [], id: \.self) { episode in
-                                NavigationLink(value: episode) {
-                                    EpisodeView(episode: episode)
-                                }
-                            }
-                        }
+                        episodesList(for: season)
                     }
                 }
             }
             .padding()
         }
     }
+    
+    private func episodesList(for season: Int) -> some View {
+        LazyVGrid(columns: columns, spacing: 20) {
+            ForEach(vm.episodesBySeason[season] ?? [], id: \.self) { episode in
+                NavigationLink(value: episode) {
+                    EpisodeView(episode: episode)
+                }
+            }
+        }
+    }
 
+    private func seasonSection(for season: Int) -> some View {
+        HStack {
+            Text("Season \(season)")
+            NavigationLink(destination: SerieProgressView(progress: vm.getSerieTotalProgress())) {
+                seasonImage(for: season)
+            }
+            Spacer()
+            seasonWatchedToggle(for: season)
+        }.padding(.vertical, 10)
+    }
+    
+    private func seasonWatchedToggle(for season: Int) -> AnyView? {
+        if !vm.showFavorites {
+            return AnyView(Toggle(isOn: Binding(
+                get: { vm.getSeasonSeenStatus(season: season) },
+                set: { vm.setSeasonSeenStatus(to: $0, forSeason: season) }
+            )) {
+                Text("Season watched")
+            }
+            .toggleStyle(.checkmark)
+            .padding(.trailing, 5))
+        } else {
+            return nil
+        }
+    }
+    
+    private func seasonImage(for season: Int) -> some View {
+        Group {
+            if let image = UIImage(named: "season\(season)") {
+                Image(uiImage: image)
+            } else {
+                Image(systemName: "photo")
+            }
+        }
+        .scaledToFit()
+        .frame(height: 35)
+        .overlay {
+            Rectangle().foregroundStyle(.black.opacity(0.7))
+        }
+        .overlay {
+            Text(vm.getProgressText(for: season))
+                .fontWeight(.bold)
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50)
+                .foregroundColor(.white)
+                .padding(.all, 10)
+        }
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+    }
+    
+    
 }
 
 #Preview {
-    MainView()
+    MainView.preview
 }
