@@ -14,7 +14,9 @@ struct CheckboxToggleStyle: ToggleStyle {
                 .stroke(lineWidth: 2)
                 .frame(width: 25, height: 25)
                 .overlay {
-                    Image(systemName: configuration.isOn ? "checkmark" : "")
+                    if configuration.isOn {
+                        Image(systemName: "checkmark")
+                    }
                 }
                 .onTapGesture {
                     configuration.isOn.toggle()

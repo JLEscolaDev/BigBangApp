@@ -12,12 +12,14 @@ struct EpisodeDetail: View {
         self.episode = episode
         self._rating = .init(initialValue: episode.rating)
         self._inputText = .init(initialValue: episode.comments)
+        self._isFavorite = .init(initialValue: episode.favorite)
     }
     
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject private var vm: BigBangVM
     @State private var rating: UInt8 = 0
     @State private var inputText: String = ""
+    @State private var isFavorite: Bool
     
     let episode: BigBangModel
     
@@ -26,7 +28,7 @@ struct EpisodeDetail: View {
             Image(episode.image)
                 .resizable()
                 .scaledToFill()
-                .frame(width: .infinity, height: 300)
+                .frame(height: 300)
                 .padding(.bottom, 30)
             Text(episode.name)
                 .font(.title)
@@ -50,8 +52,9 @@ struct EpisodeDetail: View {
             ToolbarItem(placement: .topBarTrailing) {
                 Button(action: {
                     vm.toggleEpisodeFavorite(episode: episode)
+                    isFavorite.toggle()
                 }, label: {
-                    if episode.favorite {
+                    if isFavorite {
                         Image(systemName: "star.slash")
                             .foregroundStyle(.red)
                     } else {

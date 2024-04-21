@@ -6,16 +6,6 @@
 //
 
 
-//TODO:
-//    Acabar el completar el visto en toda una season
-//    Arreglar el tap en el checkbox para no tener que darle dos veces para cambiar de estado y a la estrella del detalle
-//
-//  ✅  Añadir botón de favoritos en la navigation bar que filtre los episodios por favoritos
-//    Crear pantalla de detalle del episodio en el que pueda guardar: favorito, valoración de 1 a 5 estrellas y un texto libre.
-//Extra: Modificar la navegación para que el pulsar en el checkbox no detecte también el tap de la celda
-//Extra: Modificar las secciones para poder pulsar en ellas y que se oculten los episodios
-//Extra: Modificar las secciones de las seasons para usar también las portadas/imágenes.
-//Extra: Crear una vista que muestre la imagen principal de la serie con un gauge del porcentaje que llevas visto de la serie.
 import SwiftUI
 
 struct MainView: View {
@@ -76,14 +66,16 @@ struct MainView: View {
                         HStack {
                             Text("Season \(season)")
                             Spacer()
+                        if !vm.showFavorites { // Disable the all episodes seen when displaying the favorites.
                             Toggle(isOn: Binding(
-                                get: { self.vm.seasonCheckedState[season] ?? false },
-                                set: { self.vm.seasonCheckedState[season] = $0 }
+                                get: {vm.getSeasonSeenStatus(season: season)},
+                                set: {vm.setSeasonSeenStatus(to: $0, forSeason: season)}
                             )) {
                                 Text("Season watched")
                             }
                             .toggleStyle(.checkmark)
                             .padding(.trailing, 5)
+                        }
                         }.padding(.vertical, 10)
                     ) {
                         LazyVGrid(columns: columns, spacing: 20) {

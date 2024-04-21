@@ -11,7 +11,12 @@ struct EpisodeView: View {
     let episode: BigBangModel
     @EnvironmentObject private var vm: BigBangVM
     
-    @State private var isChecked: Bool = false
+    @State private var isChecked: Bool
+    
+    init(episode: BigBangModel) {
+        self.episode = episode
+        self._isChecked = .init(initialValue: episode.seen)
+    }
     
     var body: some View {
         HStack(spacing: 5) {
@@ -22,9 +27,7 @@ struct EpisodeView: View {
                 .stroke(isChecked ? .blue : .gray.opacity(0.6), lineWidth: 2)
         )
         .clipShape(RoundedRectangle(cornerRadius: 15))
-        .onChange(of: isChecked) { _, newValue in
-            vm.updateEpisodeSeen(newValue, episode: episode)
-        }
+        
     }
     
     /// Image that displays the episode image or a placeholder if the image is not available
@@ -55,6 +58,9 @@ struct EpisodeView: View {
             }
             .toggleStyle(.checkmark)
             .padding(.trailing, 5)
+            .onChange(of: isChecked) { _, newValue in
+                vm.updateEpisodeSeen(newValue, episode: episode)
+            }
         }
     }
     

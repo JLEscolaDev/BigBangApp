@@ -7,10 +7,23 @@
 
 import SwiftUI
 
+//extension BigBangVM {
+//    convenience init(forTesting: Bool = false) {
+//        if forTesting {
+//            self.init(interactor: LocalDataInteractor(jsonFileName: "BigBangTest"))
+//        } else {
+//            self.init(interactor: LocalDataInteractor(jsonFileName: "BigBang"))
+//        }
+//    }
+//    
+//    enum DataInteractorType: String {
+//        case prod = "BigBang"
+//        case testing = "BigBangTest"
+//    }
+//}
 
 let bigBangDataShared = LocalDataInteractor(jsonFileName: "BigBang")
 let bigBangDataTest = LocalDataInteractor(jsonFileName: "BigBangTest")
-
 
 final class BigBangVM: ObservableObject {
     private let interactor: LocalDataInteractor
@@ -92,6 +105,40 @@ final class BigBangVM: ObservableObject {
         for season in Set(episodes.map(\.season)) {
             seasonCheckedState[season] = false
         }
+//        let seasonSeen = self.episodesBySeason[1].map({
+//            $0.seen = true
+//        })
+    }
+    
+    func setSeasonSeenStatus(to seenStatus: Bool, forSeason season: Int) {
+        // Map over episodes and update the seen status for the specified season by creating new instances.
+        episodes = episodes.map { episode in
+            guard episode.season == season else { return episode }
+            return BigBangModel(
+                id: episode.id,
+                url: episode.url,
+                name: episode.name,
+                season: episode.season,
+                number: episode.number,
+                airDate: episode.airDate,
+                runtime: episode.runtime,
+                image: episode.image,
+                summary: episode.summary,
+                favorite: episode.favorite,
+                seen: seenStatus,
+                comments: episode.comments,
+                rating: episode.rating
+            )
+        }
+    }
+
+    
+    func getSeasonSeenStatus(season: Int) -> Bool  {
+        if let _ = episodesBySeason[season]?.first(where: {$0.seen == false}) {
+            false
+        } else {
+            true
+        }
     }
     
 //    func deleteEpisode(indexSet: IndexSet) {
@@ -161,7 +208,6 @@ final class BigBangVM: ObservableObject {
     
     func updateEpisode(episode: BigBangModel) {
         if let index = episodes.firstIndex(where: { $0.id == episode.id }) {
-            print(episode)
             episodes[index] = episode
         }
     }
