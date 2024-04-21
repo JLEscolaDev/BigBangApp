@@ -141,6 +141,11 @@ final class BigBangVM: ObservableObject {
         }
     }
     
+    /// Creates an string for display how much episodes have you seen for the selected season. With format: 17/25.
+    func getProgressText(for season: Int) -> String {
+        "\(episodesBySeason[season]?.filter({$0.seen}).count ?? 0)/\(episodesBySeason[season]?.count ?? 0)"
+    }
+    
 //    func deleteEpisode(indexSet: IndexSet) {
 //        episodes.remove(atOffsets: indexSet)
 //    }
