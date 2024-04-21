@@ -65,6 +65,7 @@ struct MainView: View {
                     Section(header:
                         HStack {
                             Text("Season \(season)")
+                        NavigationLink(destination: SerieProgressView(progress: vm.getSerieTotalProgress())) {
                             Group {
                                 if let image = UIImage(named: "season\(season)") {
                                     Image(uiImage: image)
@@ -85,6 +86,9 @@ struct MainView: View {
                                     .padding(.all, 10)
                             }
                             .clipShape(RoundedRectangle(cornerRadius: 10))
+                        }
+                            
+                            
                             Spacer()
                             if !vm.showFavorites {
                                 Toggle(isOn: Binding(

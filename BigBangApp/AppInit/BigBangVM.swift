@@ -146,13 +146,13 @@ final class BigBangVM: ObservableObject {
         "\(episodesBySeason[season]?.filter({$0.seen}).count ?? 0)/\(episodesBySeason[season]?.count ?? 0)"
     }
     
-//    func deleteEpisode(indexSet: IndexSet) {
-//        episodes.remove(atOffsets: indexSet)
-//    }
-//    
-//    func moveEpisode(indexSet: IndexSet, to: Int) {
-//        episodes.move(fromOffsets: indexSet, toOffset: to)
-//    }
+    /// Calculates the total percentage of watched serie
+    func getSerieTotalProgress() -> CGFloat {
+        let totalEpisodes = episodes.count
+        guard totalEpisodes > 0 else { return 0 }
+        let watchedEpisodes = episodes.filter({ $0.seen }).count
+        return CGFloat(watchedEpisodes) / CGFloat(totalEpisodes)
+    }
     
     func updateEpisodeSeen(_ seen: Bool, episode: BigBangModel) {
         let newModel = BigBangModel(
