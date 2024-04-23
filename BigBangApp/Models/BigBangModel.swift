@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BigBangModel: Codable, Hashable {
+struct BigBangModel: Codable, Hashable, Identifiable, Equatable {
     init(id: Int, url: URL, name: String, season: Int, number: Int, airDate: String, runtime: Int, image: String, summary: String, favorite: Bool, seen: Bool, comments: String, rating: UInt8) {
         self.id = id
         self.url = url
@@ -34,7 +34,7 @@ struct BigBangModel: Codable, Hashable {
     let image: String
     let summary: String
     let favorite: Bool
-    let seen: Bool
+    var seen: Bool
     let comments: String
     let rating: UInt8
     

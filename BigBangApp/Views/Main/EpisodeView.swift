@@ -11,7 +11,7 @@ struct EpisodeView: View {
     let episode: BigBangModel
     @EnvironmentObject private var vm: BigBangVM
     
-    @State private var isChecked: Bool
+    @State var isChecked: Bool
     
     init(episode: BigBangModel) {
         self.episode = episode
@@ -24,7 +24,7 @@ struct EpisodeView: View {
             episodeSeenCheckBox
         }.background(
             RoundedRectangle(cornerRadius: 15)
-                .stroke(isChecked ? .blue : .gray.opacity(0.6), lineWidth: 2)
+                .stroke(episode.seen ? .blue : .gray.opacity(0.6), lineWidth: 2)
         )
         .clipShape(RoundedRectangle(cornerRadius: 15))
         
@@ -54,13 +54,51 @@ struct EpisodeView: View {
         VStack(alignment: .leading) {
             Text(String(episode.number))
                 .fontWeight(.semibold)
+//            Button(action: {
+//                vm.toggleSeen(episode: episode)
+//            }, label: {
+//                Text("update")
+//                    .foregroundStyle(episode.seen ? .green : .gray)
+//
+//            })
+//            if let seenStatus = vm.toggleSeen(vm: $vm, episode: episode) {
+//                Toggle(isOn: seenStatus) {
+//                    
+//                }
+//                .toggleStyle(.checkmark)
+//                .padding(.trailing, 5)
+//                //                .onChange(of: episode.seen) { _, newValue in
+//                //                    vm.updateEpisodeSeen(newValue, episode: episode)
+//                //                }
+//            }
+            
+            
+//            if let episodeIndex = vm.episodes.firstIndex(where: { $0.id == episode.id }) {
+//                Toggle(isOn: $vm.episodes[episodeIndex].seen) {
+//                    
+//                }
+//                .toggleStyle(.checkmark)
+//                .padding(.trailing, 5)
+////                .onChange(of: episode.seen) {
+////                    if let index = vm.episodes.firstIndex(of: episode) {
+////                        vm.episodes[index].seen.toggle()
+////                    }
+////                }
+//            }
+            
+//            if let episodeIndex = vm.episodes.firstIndex(where: { $0.id == episode.id }) {
             Toggle(isOn: $isChecked) {
-            }
-            .toggleStyle(.checkmark)
-            .padding(.trailing, 5)
-            .onChange(of: isChecked) { _, newValue in
-                vm.updateEpisodeSeen(newValue, episode: episode)
-            }
+                    
+                }
+                .toggleStyle(.checkmark)
+                .padding(.trailing, 5)
+//                .onChange(of: episode.seen, initial: episode.seen, { oldValue, newValue in
+//                    vm.toggleSeen(episode: episode)
+//                })
+                .onChange(of: isChecked) {
+                    vm.toggleSeen(episode: episode)
+                }
+//            }
         }
     }
     

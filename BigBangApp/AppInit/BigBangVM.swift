@@ -46,7 +46,6 @@ final class BigBangVM: ObservableObject {
     @Published var showFavorites: Bool = false
     @Published var seasonCheckedState: [Int: Bool] = [:]
     
-    
     var episodesBySeason: [Int: [BigBangModel]] {
         // Grouping episodes by season
         let grouped = Dictionary(grouping: filteredEpisodes, by: { $0.season })
@@ -146,24 +145,39 @@ final class BigBangVM: ObservableObject {
         return CGFloat(watchedEpisodes) / CGFloat(totalEpisodes)
     }
     
-    func updateEpisodeSeen(_ seen: Bool, episode: BigBangModel) {
-        let newModel = BigBangModel(
-            id: episode.id,
-            url: episode.url,
-            name: episode.name,
-            season: episode.season,
-            number: episode.number,
-            airDate: episode.airDate,
-            runtime: episode.runtime,
-            image: episode.image,
-            summary: episode.summary,
-            favorite: episode.favorite,
-            seen: seen,
-            comments: episode.comments,
-            rating: episode.rating
-        )
-        updateEpisode(episode: newModel)
+    func toggleSeen(episode: BigBangModel) {
+        if let index = episodes.firstIndex(of: episode) {
+            episodes[index].seen.toggle()
+        }
     }
+    
+    func toggleSeen(vm: EnvironmentObject<BigBangVM>.Wrapper,episode: BigBangModel) -> Binding<Bool>? {
+//        guard let seenStatus = vm.episodes.first(where: {$0.id == episode.id})?.seen else { return nil }
+        if let status = vm.episodes.first(where: {$0.id == episode.id})?.seen {
+            status
+        }else {
+            nil
+        }
+    }
+    
+//    func updateEpisodeSeen(_ seen: Bool, episode: BigBangModel) {
+//        let newModel = BigBangModel(
+//            id: episode.id,
+//            url: episode.url,
+//            name: episode.name,
+//            season: episode.season,
+//            number: episode.number,
+//            airDate: episode.airDate,
+//            runtime: episode.runtime,
+//            image: episode.image,
+//            summary: episode.summary,
+//            favorite: episode.favorite,
+//            seen: seen,
+//            comments: episode.comments,
+//            rating: episode.rating
+//        )
+//        updateEpisode(episode: newModel)
+//    }
     
     func toggleEpisodeFavorite(episode: BigBangModel) {
         let newModel = BigBangModel(
