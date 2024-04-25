@@ -56,11 +56,12 @@ struct EpisodeView: View {
                 .fontWeight(.semibold)
             Toggle(isOn: $isChecked) {
             }
-            .toggleStyle(.checkmark)
+            .toggleStyle(
+                CheckboxToggleStyle(tapGestureAction: .custom {
+                    vm.updateEpisodeSeen(!isChecked, episode: episode)
+                })
+            )
             .padding(.trailing, 5)
-            .onChange(of: isChecked) { _, newValue in
-                vm.updateEpisodeSeen(newValue, episode: episode)
-            }
         }
     }
     

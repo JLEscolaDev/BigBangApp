@@ -33,10 +33,10 @@ struct BigBangModel: Codable, Hashable {
     let runtime: Int
     let image: String
     let summary: String
-    let favorite: Bool
-    let seen: Bool
-    let comments: String
-    let rating: UInt8
+    var favorite: Bool
+    var seen: Bool
+    var comments: String
+    var rating: UInt8
     
     enum CodingKeys: String, CodingKey {
         case id

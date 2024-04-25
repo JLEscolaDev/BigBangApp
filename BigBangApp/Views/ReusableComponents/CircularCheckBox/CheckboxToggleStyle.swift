@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct CheckboxToggleStyle: ToggleStyle {
+    enum TapGestureActionOption {
+        case `default`
+        case custom(() -> Void)
+    }
+    
+    let tapGestureAction: TapGestureActionOption
+    
     func makeBody(configuration: Configuration) -> some View {
         HStack {
             Circle()
@@ -19,7 +26,12 @@ struct CheckboxToggleStyle: ToggleStyle {
                     }
                 }
                 .onTapGesture {
-                    configuration.isOn.toggle()
+                    switch tapGestureAction {
+                        case .default:
+                            configuration.isOn.toggle()
+                        case .custom(let action):
+                            action()
+                    }
                 }
                 .foregroundStyle(configuration.isOn ? .blue : .gray.opacity(0.6))
  
@@ -32,5 +44,5 @@ struct CheckboxToggleStyle: ToggleStyle {
 
 extension ToggleStyle where Self == CheckboxToggleStyle {
     /// Convenience checkbox style with a circle toggle instead of a rectangle
-    static var checkmark: CheckboxToggleStyle { CheckboxToggleStyle() }
+    static var checkmark: CheckboxToggleStyle { CheckboxToggleStyle(tapGestureAction: .default) }
 }

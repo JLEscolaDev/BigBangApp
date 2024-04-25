@@ -161,6 +161,21 @@
                   endingLineNumber = "27"
                   offsetFromSymbolStart = "764">
                </Location>
+               <Location
+                  uuid = "EF92F2C3-4898-4593-A4A0-A3D858DF9AA1 - 4681d6d5dd3c9cfd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of BigBangApp.EpisodeDetail.episodeImage : some&gt;&gt;.0, &lt;&lt;opaque return type of BigBangApp.EpisodeDetail.episodeTitle : some&gt;&gt;.0, &lt;&lt;opaque return type of BigBangApp.EpisodeDetail.comments : some&gt;&gt;.0, BigBangApp.StarRatingView, &lt;&lt;opaque return type of BigBangApp.EpisodeDetail.saveButton : some&gt;&gt;.0, SwiftUI.Spacer)&gt; in BigBangApp.EpisodeDetail.body.getter : some"
+                  moduleName = "BigBangApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jle/projects/Projects/SwiftBootcamp2024/apps/BootcampSwiftUIExercises/BigBangApp/BigBangApp/Views/Detail/EpisodeDetail.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "332">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -288,6 +303,21 @@
                   endingLineNumber = "58"
                   offsetFromSymbolStart = "368">
                </Location>
+               <Location
+                  uuid = "85A21FEF-A290-400F-994C-8711545062D8 - 30b050b2502081be"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.foregroundStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.foregroundStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.Button&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.foregroundStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.foregroundStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt;&gt; in closure #2 () -&gt; &lt;&lt;opaque return type of static SwiftUI.ToolbarContentBuilder.buildBlock&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.ToolbarContent&gt;(&#x3c4;_0_0) -&gt; some&gt;&gt;.0 in BigBangApp.EpisodeDetail.body.getter : some"
+                  moduleName = "BigBangApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jle/projects/Projects/SwiftBootcamp2024/apps/BootcampSwiftUIExercises/BigBangApp/BigBangApp/Views/Detail/EpisodeDetail.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "368">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -351,24 +381,22 @@
                   endingLineNumber = "61"
                   offsetFromSymbolStart = "744">
                </Location>
+               <Location
+                  uuid = "7D32B1A4-67EE-423A-81AB-E21D05DF738F - 30b050b2502081d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.foregroundStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.foregroundStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.Button&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.foregroundStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.foregroundStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt;&gt; in closure #2 () -&gt; &lt;&lt;opaque return type of static SwiftUI.ToolbarContentBuilder.buildBlock&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.ToolbarContent&gt;(&#x3c4;_0_0) -&gt; some&gt;&gt;.0 in BigBangApp.EpisodeDetail.body.getter : some"
+                  moduleName = "BigBangApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jle/projects/Projects/SwiftBootcamp2024/apps/BootcampSwiftUIExercises/BigBangApp/BigBangApp/Views/Detail/EpisodeDetail.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "744">
+               </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AFF1EF11-2002-4362-A1A2-7E848AAA7CB9"
-            shouldBeEnabled = "Yes"
-            condition = "episode.id == 2914"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BigBangApp/Views/ReusableComponents/CircularCheckBox/CheckboxToggleStyle.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "makeBody(configuration:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -381,9 +409,25 @@
             filePath = "BigBangApp/AppInit/BigBangVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "getSerieTotalProgress()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8097004D-E523-4DB2-9275-F6EE5D48ED40"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BigBangApp/AppInit/BigBangVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "updateEpisodeSeen(_:episode:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

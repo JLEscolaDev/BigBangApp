@@ -106,21 +106,9 @@ final class BigBangVM: ObservableObject {
         // Map over episodes and update the seen status for the specified season by creating new instances.
         episodes = episodes.map { episode in
             guard episode.season == season else { return episode }
-            return BigBangModel(
-                id: episode.id,
-                url: episode.url,
-                name: episode.name,
-                season: episode.season,
-                number: episode.number,
-                airDate: episode.airDate,
-                runtime: episode.runtime,
-                image: episode.image,
-                summary: episode.summary,
-                favorite: episode.favorite,
-                seen: seenStatus,
-                comments: episode.comments,
-                rating: episode.rating
-            )
+            var newModel = episode
+            newModel.seen = seenStatus
+            return newModel
         }
     }
 
@@ -147,59 +135,21 @@ final class BigBangVM: ObservableObject {
     }
     
     func updateEpisodeSeen(_ seen: Bool, episode: BigBangModel) {
-        let newModel = BigBangModel(
-            id: episode.id,
-            url: episode.url,
-            name: episode.name,
-            season: episode.season,
-            number: episode.number,
-            airDate: episode.airDate,
-            runtime: episode.runtime,
-            image: episode.image,
-            summary: episode.summary,
-            favorite: episode.favorite,
-            seen: seen,
-            comments: episode.comments,
-            rating: episode.rating
-        )
+        var newModel = episode
+        newModel.seen = seen
         updateEpisode(episode: newModel)
     }
     
     func toggleEpisodeFavorite(episode: BigBangModel) {
-        let newModel = BigBangModel(
-            id: episode.id,
-            url: episode.url,
-            name: episode.name,
-            season: episode.season,
-            number: episode.number,
-            airDate: episode.airDate,
-            runtime: episode.runtime,
-            image: episode.image,
-            summary: episode.summary,
-            favorite: !episode.favorite,
-            seen: episode.seen,
-            comments: episode.comments,
-            rating: episode.rating
-        )
+        var newModel = episode
+        newModel.favorite.toggle()
         updateEpisode(episode: newModel)
     }
     
     func saveCommentsAndRating(episode: BigBangModel, comments: String, rating: UInt8) {
-        let newModel = BigBangModel(
-            id: episode.id,
-            url: episode.url,
-            name: episode.name,
-            season: episode.season,
-            number: episode.number,
-            airDate: episode.airDate,
-            runtime: episode.runtime,
-            image: episode.image,
-            summary: episode.summary,
-            favorite: !episode.favorite,
-            seen: episode.seen,
-            comments: comments,
-            rating: rating
-        )
+        var newModel = episode
+        newModel.comments = comments
+        newModel.rating = rating
         updateEpisode(episode: newModel)
     }
     
